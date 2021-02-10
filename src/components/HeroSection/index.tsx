@@ -1,13 +1,14 @@
 import { FunctionComponent } from 'react';
 import Typewriter from 'typewriter-effect';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
-const category = [
+const categories = [
   'Bussiness Development',
   'Customer Support',
   'Design & Development',
   'Product Management'
-]
+];
+
 const HeroSection: FunctionComponent<{}> = () => {
   return (
     <div className="container mx-auto flex items-center mt-16">
@@ -15,14 +16,20 @@ const HeroSection: FunctionComponent<{}> = () => {
         <h1 className="text-4xl">Find World's Best Remote Jobs</h1>
         <span className="flex text-5xl">On 
           <Typewriter
+            onInit={(typewriter) => {
+              typewriter.typeString('Software Development')
+                .pauseFor(1500)
+                .deleteAll()
+                .start();
+            }}
             options={{
-              strings: category,
+              strings: categories,
               autoStart: true,
-              loop: true,
+              loop: true
             }}
           />
         </span>
-        <motion.button 
+        <motion.button
           initial={{x:'-100vh'}} 
           animate={{x: 0, transition: {type: 'spring', stiffness: 150}}} 
           className="c-btn-get-started py-4 px-8 mt-8 rounded-full text-white"
