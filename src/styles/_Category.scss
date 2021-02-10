@@ -1,0 +1,13 @@
+.c-category{
+  width: 90%;
+  margin: auto;
+  .c-category-card-img{
+    width: 20%;
+  }
+  .c-category-card:hover{
+    background-color: #FB7C6D;
+    color: white;
+    cursor: pointer;
+    transition:background-color .4s ease-in-out;
+  }
+}
