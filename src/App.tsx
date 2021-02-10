@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
+
+import Category from './components/Category';
 import Header from './components/Header';
 
-function App() {
+const App:FunctionComponent<{}> = () => {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <>
+      <header>
+        <Header />
+      </header>
+      <main className="main mt-8 p-8">
+        <Category />
+      </main>
+    </>
   );
 }
 
