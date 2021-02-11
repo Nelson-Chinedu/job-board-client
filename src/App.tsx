@@ -5,6 +5,7 @@ import Category from './components/Category';
 import Header from './components/Header';
 import Subscription from './components/Subscription';
 import TrendingJob from './components/TrendingJob';
+import Footer from './components/Footer';
 
 const App:FunctionComponent<{}> = () => {
   return (
@@ -18,6 +19,9 @@ const App:FunctionComponent<{}> = () => {
         <About />
         <Subscription />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
