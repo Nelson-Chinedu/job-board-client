@@ -21,7 +21,7 @@ const TrendingJobCard: FunctionComponent<Props> = ({
         `c-trending-job-card 
         ${mainClassname} 
         ${className} 
-        bg-white shadow px-4 pb-6 inline-block my-4`
+        block my-6 bg-white shadow px-4 pb-6 md:inline-block md:my-4`
       }
     >
       {children}

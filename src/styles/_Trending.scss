@@ -1,5 +1,10 @@
 .c-trending{
   width: 90%;
+  @media screen and (max-width: 640px) {
+    .c-trending{
+      width: 10%;
+    }
+  }
 }
 .c-trending-job-card{
   width: 30%;
@@ -15,5 +20,11 @@
   }
   .c-trending-card-img{
     width: 25%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .c-trending-job-card{
+    width: 100%;
   }
 }

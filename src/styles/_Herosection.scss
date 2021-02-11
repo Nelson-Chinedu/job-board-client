@@ -7,3 +7,10 @@
 .c-btn-get-started{
   background-color: #FF8148;
 }
+
+@media screen and (max-width: 640px) {
+  .Typewriter{
+    font-size: 1.8rem;
+    padding-left: 0px;
+  }
+}

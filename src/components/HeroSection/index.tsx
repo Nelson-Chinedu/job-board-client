@@ -11,10 +11,10 @@ const categories = [
 
 const HeroSection: FunctionComponent<{}> = () => {
   return (
-    <div className="container mx-auto flex items-center mt-16">
-      <div className="w-6/12 ml-4">
-        <h1 className="text-4xl">Find World's Best Remote Jobs</h1>
-        <span className="flex text-5xl">On 
+    <div className="container mx-auto flex flex-col-reverse md:flex-row md:items-center mt-20">
+      <div className="w-full pl-4 md:w-6/12 md:pl-2 md:ml-0">
+        <h1 className="text-3xl font-bold md:text-4xl">Find World's Best Remote Jobs <span className="inline-block md:hidden">On</span></h1>
+        <span className="flex flex-col font-bold md:flex-row text-2xl md:text-5xl"><span className="hidden md:block">On</span> 
           <Typewriter
             onInit={(typewriter) => {
               typewriter.typeString('Software Development')
@@ -31,13 +31,14 @@ const HeroSection: FunctionComponent<{}> = () => {
         </span>
         <motion.button
           initial={{x:'-100vh'}} 
-          animate={{x: 0, transition: {type: 'spring', stiffness: 150}}} 
+          animate={{x: 0, transition: {type: 'spring', stiffness: 150}}}
+          whileHover={{translateY: -5}}
           className="c-btn-get-started py-4 px-8 mt-8 rounded-full text-white"
         >
           Get Started
         </motion.button>
       </div>
-      <div className="w-6/12">
+      <div className="w-full md:w-6/12">
         <img src="/heroBanner.webp" alt="banner" className="" />
       </div>
     </div>

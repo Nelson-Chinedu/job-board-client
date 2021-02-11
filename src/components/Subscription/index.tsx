@@ -29,10 +29,10 @@ const Subscription: FunctionComponent<{}> = () => {
   };
 
   return (
-    <div className="c-subscribe text-center rounded-lg py-8 mx-auto my-8">
-      <h3 className="text-3xl font-bold text-white">Subscribe To Our Newsletter</h3>
+    <div className="c-subscribe text-center rounded-lg py-6 md:py-8 mx-auto my-8">
+      <h3 className="text-2xl md:text-3xl font-bold text-white">Subscribe To Our Newsletter</h3>
       <p className="text-white py-2">New updates, notifications, job alerts for job seekers & employers</p>
-      <div className="w-2/5 mx-auto my-4">
+      <div className="w-3/4 my-2 md:w-2/5 mx-auto md:my-4">
         <input placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-md focus:outline-none" />
         <motion.button 
           variants={boxVariants} 
