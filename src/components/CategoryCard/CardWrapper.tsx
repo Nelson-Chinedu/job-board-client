@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import Card from './index';
+import CategoryCard from './index';
 
 type Props = {
   headlineTop: string;
@@ -17,7 +17,7 @@ const CardWrapper:FunctionComponent<Props> = ({
   imagePath
 }) => {
   return(
-    <Card marginRight={marginRight} className="c-category-card rounded-md">
+    <CategoryCard marginRight={marginRight} className="c-category-card rounded-md">
       <div className="flex justify-between items-end pt-2">
         <img src={imagePath} alt="progress" className="c-category-card-img"/>
         <img src="/dot-hover.png" alt="dot"/>
@@ -27,7 +27,7 @@ const CardWrapper:FunctionComponent<Props> = ({
         <h4 className="font-bold">{headlineBottom}</h4>
       </div>
       <p>{label}</p>
-    </Card>
+    </CategoryCard>
   )
 };
 

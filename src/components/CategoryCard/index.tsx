@@ -7,7 +7,7 @@ type Props = {
   className?: string;
 };
 
-const Card: FunctionComponent<Props> = ({
+const CategoryCard: FunctionComponent<Props> = ({
   children,
   marginRight,
   className
@@ -24,4 +24,4 @@ const Card: FunctionComponent<Props> = ({
   )
 };
 
-export default Card;
+export default CategoryCard;

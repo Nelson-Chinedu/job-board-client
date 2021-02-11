@@ -31,7 +31,7 @@ const Category: FunctionComponent<{}> = () => {
   };
   return (
     <div className="c-category">
-      <div className="flex items-end justify-between">
+      <div className="flex items-end justify-between mb-4">
         <div>
           <h3 className="text-4xl font-semibold">Remote Jobs</h3>
           <h3 className="text-4xl font-semibold">By Category</h3>

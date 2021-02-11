@@ -1,0 +1,19 @@
+.c-trending{
+  width: 90%;
+}
+.c-trending-job-card{
+  width: 30%;
+}
+.c-trending-card{
+  >p{
+    color: #FC9B90;
+  }
+  &:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+    transition:transform .4s ease-in-out;
+  }
+  .c-trending-card-img{
+    width: 25%;
+  }
+}
