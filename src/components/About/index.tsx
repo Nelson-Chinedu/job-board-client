@@ -1,9 +1,57 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const About: FunctionComponent<{}> = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView){
+      controls.start('visible');
+    }
+    if (!inView){
+      controls.start('hidden');
+    }
+  },[controls, inView]);
+
+  const boxVariantsLeft = {
+    hidden: {opacity: 0, x: '10vw'},
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition:{
+        type: 'spring',
+        stiffness: 150,
+        duration: 0.5,
+        delay: .5
+      }
+    }
+  };
+
+  const boxVariantsRight = {
+    hidden: {opacity: 0, x: '-10vw'},
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition:{
+        type: 'spring',
+        stiffness: 150,
+        duration: 0.5,
+        delay: .5
+      }
+    }
+  };
+  
   return (
     <div className="c-about flex items-start mx-auto">
-      <div className="w-1/2 pt-10">
+      <motion.div 
+        initial="hidden" 
+        variants={boxVariantsLeft} 
+        animate={controls} 
+        ref={ref} 
+        className="w-1/2 pt-10"
+      >
         <h3 className="text-3xl font-semibold">
           The finder has been created to foster long-term
           business relations and network built on Trust and quality.
@@ -19,10 +67,16 @@ const About: FunctionComponent<{}> = () => {
           <img src="/slack.svg" alt="slack logo"/>
           <img src="/ibm.svg" alt="ibm logo"/>
         </div>
-      </div>
-      <div className="w-1/2">
+      </motion.div>
+      <motion.div 
+        initial="hidden" 
+        variants={boxVariantsRight} 
+        animate={controls} 
+        ref={ref} 
+        className="w-1/2"
+      >
         <img src="/aboutt.png" alt="" className="w-full" />
-      </div>
+      </motion.div>
     </div>
   )
 };

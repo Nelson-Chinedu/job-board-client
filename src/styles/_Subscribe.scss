@@ -1,0 +1,10 @@
+.c-subscribe{
+  width: 70%;
+  background-color: #FB7C6D;
+  .c-btn-subscribe{
+    background-color: #00ACAC;
+    &:hover{
+      background-color: #019690;
+    }
+  }
+}
