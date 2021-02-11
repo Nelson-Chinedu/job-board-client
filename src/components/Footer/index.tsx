@@ -3,22 +3,22 @@ import { FunctionComponent } from 'react';
 const Footer: FunctionComponent<{}> = () => {
   return (
     <div className="">
-      <div className="flex items-start justify-around my-10">
-        <div>
+      <div className="flex flex-col mx-4 md:flex-row md:items-start md:justify-around md:mx-0 my-10">
+        <div className="mb-6">
           <img src="/logo.png" alt="logo" className="w-1/4"/>
           <p className="w-3/5">An ultimate solution for remote jobs</p>
         </div>
-        <div>
+        <div className="mb-4 md:mb-0">
           <h4 className="font-bold">Employers</h4>
-          <div className="mt-5">
+          <div className="mt-3 md:mt-5">
             <p className="pb-3">Overview</p>
             <p className="pb-3">Pricing</p>
             <p>Post a job</p>
           </div>
         </div>
-        <div>
+        <div className="mb-4 md:mb-0">
           <h4 className="font-bold">About</h4>
-          <div className="mt-5">
+          <div className="mt-3 md:mt-5">
             <p className="pb-3">Success stories</p>
             <p className="pb-3">Overview</p>
             <p className="pb-3">Team</p>
@@ -27,7 +27,7 @@ const Footer: FunctionComponent<{}> = () => {
         </div>
         <div>
           <h4 className="font-bold">General</h4>
-          <div className="mt-5">
+          <div className="mt-3 md:mt-5">
             <p className="pb-3">News</p>
             <p className="pb-3">FAQ's</p>
             <p className="pb-3">Contact us</p>

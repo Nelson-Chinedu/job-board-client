@@ -1,3 +1,8 @@
 .c-card{
   width: 20%;
 }
+@media screen and (max-width: 640px) {
+  .c-card{
+    width: 100%;
+  }
+}

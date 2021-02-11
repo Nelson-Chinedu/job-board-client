@@ -1,6 +1,11 @@
 .c-category{
   width: 90%;
   margin: auto;
+  @media screen and (max-width: 640px) {
+    .c-category{
+      width: 100%;
+    }
+  }
   .c-category-card-img{
     width: 20%;
   }
@@ -11,3 +16,4 @@
     transition:background-color .4s ease-in-out;
   }
 }
+

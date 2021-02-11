@@ -13,7 +13,7 @@ const App:FunctionComponent<{}> = () => {
       <header>
         <Header />
       </header>
-      <main className="main mt-8 p-8">
+      <main className="main px-3 py-8 mt-8 md:px-8">
         <Category />
         <TrendingJob />
         <About />

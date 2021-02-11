@@ -1,6 +1,12 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 
 const Navigation: FunctionComponent<{}> = () => {
+  const [isExpanded, toggleExpansion] = useState(false);
+
+  const _handleButton = () => {
+    toggleExpansion(!isExpanded);
+  };
+  
   return (
     <nav
       className="fixed top-0 w-full bg-white border border-b-black z-10 flex items-center justify-between flex-wrap p-3 c-Navbar"
@@ -12,6 +18,7 @@ const Navigation: FunctionComponent<{}> = () => {
       </div>
       <div className="block lg:hidden">
         <button
+          onClick={_handleButton}
           className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
         >
           <svg
@@ -24,17 +31,19 @@ const Navigation: FunctionComponent<{}> = () => {
           </svg>
         </button>
       </div>
-      <div>
+      <div className={`${isExpanded ? `block` : `hidden`} 
+        w-full block  lg:flex lg:items-center lg:w-auto c-Navbar-menu`}
+      >
         <div className="text-sm lg:flex-grow">
           <a
             href="/" 
-            className="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-gray-600 mr-4"
           >
             Browse All Jobs
           </a>
           <a
             href="/" 
-            className="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-gray-600 mr-4"
           >
             Find a Remote Job
           </a>

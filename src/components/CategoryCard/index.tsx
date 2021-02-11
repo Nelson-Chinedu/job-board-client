@@ -17,7 +17,7 @@ const CategoryCard: FunctionComponent<Props> = ({
   });
   return (
     <div 
-      className= {`c-card ${mainClassname} ${className} bg-white shadow px-4 pb-6 inline-block my-4`}
+      className= {`c-card ${mainClassname} ${className} block bg-white shadow px-4 pb-6 md:inline-block my-4`}
     >
       {children}
     </div>
