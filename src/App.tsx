@@ -3,6 +3,7 @@ import About from './components/About';
 
 import Category from './components/Category';
 import Header from './components/Header';
+import Subscription from './components/Subscription';
 import TrendingJob from './components/TrendingJob';
 
 const App:FunctionComponent<{}> = () => {
@@ -15,6 +16,7 @@ const App:FunctionComponent<{}> = () => {
         <Category />
         <TrendingJob />
         <About />
+        <Subscription />
       </main>
     </>
   );
