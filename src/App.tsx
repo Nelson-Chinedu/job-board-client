@@ -1,11 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import {Route, Switch, BrowserRouter} from 'react-router-dom';
 
-import About from './components/About';
-import Category from './components/Category';
-import Header from './components/Header';
-import Subscription from './components/Subscription';
-import TrendingJob from './components/TrendingJob';
 import Footer from './components/Footer';
 import PostJob from './components/PostJob';
 import Navigation from './components/Navigation';

@@ -3,7 +3,6 @@ import About from '../About';
 import Category from '../Category';
 import HeroBottom from '../HeroBottom';
 import HeroSection from '../HeroSection';
-import Navigation from '../Navigation';
 import Subscription from '../Subscription';
 import TrendingJob from '../TrendingJob';
 
