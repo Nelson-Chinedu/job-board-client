@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const HeroBottom: FunctionComponent<{}> = () => {
   return (
@@ -20,13 +20,14 @@ const HeroBottom: FunctionComponent<{}> = () => {
             <p>Average Days to Hire</p>
           </div>
           <div className="text-center">
-            <motion.button
+            <motion.a
+              href="/post-job"
               initial={{translateY: 0}}
               whileHover={{translateY: -5}}
               className="c-btn-get-started py-3 px-6 mt-8 rounded-full text-white"
             >
               Post a Job
-            </motion.button>
+            </motion.a>
           </div>
         </div>
       </div>

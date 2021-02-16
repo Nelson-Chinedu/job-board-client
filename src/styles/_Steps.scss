@@ -1,0 +1,25 @@
+.steps-content {
+  min-height: 200px;
+  margin-top: 16px;
+  padding-top: 80px;
+  text-align: center;
+  background-color: #fafafa;
+  border: 1px dashed #e9e9e9;
+  border-radius: 2px;
+  .steps-action {
+    margin-top: 24px;
+  }
+}
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon{
+  background-color: #FF8148 !important;
+  color: white;
+}
+.ant-steps-item-process .ant-steps-item-icon{
+  border-color: #FF8148 !important;
+}
+
+@media (max-width: 640px){
+  .c-form-step{
+    width: 83.333333%;
+  }
+}

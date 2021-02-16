@@ -48,7 +48,7 @@ const Navigation: FunctionComponent<{}> = () => {
             Find a Remote Job
           </a>
           <a
-            href="/" 
+            href="/post-job" 
             className="c-post-job block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-white mr-4 px-4 py-2 text-white rounded"
           >
             Post a Job
