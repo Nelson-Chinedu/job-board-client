@@ -1,0 +1,13 @@
+.c-post-job-card-wrapper{
+  width: 80%;
+}
+.c-post-job-card{
+  width: 30%;
+  border-top: 10px solid #E2E8F0;
+  &:hover{
+    border-top: 10px solid #FF8148;
+  }
+  @media (max-width: 640px){
+    width: 100%;
+  }
+}

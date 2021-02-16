@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './styles/index.scss';
+import 'antd/dist/antd.css';
+import "draft-js/dist/Draft.css";
+
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
