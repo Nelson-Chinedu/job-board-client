@@ -1,33 +1,7 @@
-import React, { FunctionComponent, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { FunctionComponent } from 'react';
 import Button from '../Shared/Button';
 
 const Subscription: FunctionComponent<{}> = () => {
-  const controls = useAnimation();
-  const {ref, inView} = useInView();
-  
-  useEffect(() => {
-    if (inView){
-      controls.start('visible');
-    }
-    if (!inView){
-      controls.start('hidden');
-    }
-  },[controls, inView]);
-
-  const boxVariants = {
-    hidden: {opacity: 0, y: 100},
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition:{
-        type: 'spring',
-        stiffness: 200,
-        duration: 0.5
-      }
-    }
-  };
 
   const _handleSubscription = () => {
     console.log('subscribed');
@@ -39,12 +13,7 @@ const Subscription: FunctionComponent<{}> = () => {
       <p className="text-white py-2">New updates, notifications, job alerts for job seekers & employers</p>
       <div className="w-3/4 my-2 md:w-2/5 mx-auto md:my-4">
         <input placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-md focus:outline-none" />
-        <motion.div 
-          variants={boxVariants}
-          initial="hidden"
-          animate={controls}
-          ref={ref}
-        >
+        <div>
           <Button
             handleClick={_handleSubscription} 
             type="button"
@@ -52,7 +21,7 @@ const Subscription: FunctionComponent<{}> = () => {
           >
             Subscribe
           </Button>
-        </motion.div>
+        </div>
       </div>
     </div>
   )

@@ -1,7 +1,19 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { motion } from 'framer-motion';
 
-const PostJobCard: FunctionComponent<{}> = () => {
+type TeirProps = {
+  plan: string;
+  price: number;
+}
+
+type Props = {
+  plan: string;
+  price: number;
+  listings: Array<string>;
+  onGetTeir: (teir: TeirProps) => void;
+};
+
+const PostJobCard: FunctionComponent<Props> = ({ plan, price, listings, onGetTeir }) => {
   const boxVariants = {
     hidden: {
       opacity: 0,
@@ -16,17 +28,24 @@ const PostJobCard: FunctionComponent<{}> = () => {
       }
     }
   }
+
   return (
-    <motion.div variants={boxVariants} whileHover={{scale: 1.1, cursor: 'pointer'}} initial="hidden" animate="visible" className="c-post-job-card my-4 shadow-md rounded-lg p-8 text-center">
-      <div>
-        <h2 className="font-bold text-5xl"><sup className="text-2xl">$</sup>75</h2>
-        <p>Basic</p>
+    <motion.div 
+      variants={boxVariants} 
+      whileHover={{scale: 1.1, cursor: 'pointer'}} 
+      initial="hidden" 
+      animate="visible"
+      className={`c-post-job-card my-4 shadow-md rounded-lg p-8 text-center`}
+      onClick={() => onGetTeir({price, plan})}
+    >
+      <div className="text-center">
+        <h2 className="font-bold text-5xl mb-0"><sup className="text-2xl">$</sup>{price}</h2>
+        <p className="text-xl">{plan}</p>
       </div>
       <div>
-        <p>
-          Featured on homepage included in bi-weekly newsletter Tweet with 
-          link to listing.
-        </p>
+        <ul>
+          {listings.map((listing:string, index: number) => <li key={index}>{listing}</li>)}
+        </ul>
       </div>
     </motion.div>
   )

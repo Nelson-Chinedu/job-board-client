@@ -1,22 +1,41 @@
-import React, { FunctionComponent } from 'react';
-import { Select } from 'antd';
-
-const { Option } = Select;
+import { FunctionComponent } from 'react';
+import Select from 'react-select';
 
 type Props = {
-  value: string;
-  defaultValue: string;
+  value?: () => void;
   label: string;
   className?: string;
+  name?: string;
+  options?: any;
+  placeholder?: string;
+  onchange?: any
+  onblur?: any;
+  error?: any;
 }
 
-const FormSelect: FunctionComponent<Props> = ({label, value, defaultValue, className}) => {
+const FormSelect: FunctionComponent<Props> = ({
+  onblur, 
+  label, 
+  value, 
+  name, 
+  options, 
+  placeholder, 
+  onchange, 
+  error
+}) => {
   return (
     <div>
-      <label htmlFor="" className="text-base font-semibold mb-4">{label}</label>
-      <Select defaultValue={defaultValue} className={`${className}`}>
-        <Option value={value}>{value}</Option>
-      </Select>
+      <label htmlFor="" className="text-base font-semibold">{label}</label>
+      <Select 
+        options={options}
+        name={name}
+        value={value}
+        placeholder={placeholder}
+        onChange={onchange}
+        onBlur={onblur}
+        className="mt-1"
+      />
+      <p className="text-red-400 text-xs">{error}</p>
     </div>
   )
 };
