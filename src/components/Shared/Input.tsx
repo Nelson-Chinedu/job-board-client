@@ -1,17 +1,22 @@
-import React, { FunctionComponent, useState } from 'react';
+import { ChangeEvent, FocusEvent ,FunctionComponent, useState } from 'react';
 import { Input, Radio } from 'antd';
 
 type defaultType = 'text' | 'email' | 'url';
 type sizeType = 'small' | 'middle' | 'large';
 
 type Props = {
-  placeholder: string;
+  placeholder?: string;
   type: defaultType;
   size: sizeType;
   label: string;
   description?: string;
   className?: string;
   radio?: boolean;
+  name?: string;
+  value?: string;
+  onChange?: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
+  error: string;
 }
 
 const FormInput: FunctionComponent<Props> = ({
@@ -21,18 +26,22 @@ const FormInput: FunctionComponent<Props> = ({
   size, 
   label, 
   description, 
-  className
+  className,
+  name,
+  value,
+  onChange,
+  onBlur,
+  error
 }) => {
-  const [value, setValue] = useState<string>('url');
+  const [inputType, setInputType] = useState<string>('url');
   const [inputPlaceholder, setInputPlaceholder] = useState<string>('http://');
 
-  const onChange = (e: any) => {
-    setValue(e.target.value);
+  const _onChange = (e: any) => {
     if(e.target.value === 'url'){
-      setValue('url');
+      setInputType('url');
       setInputPlaceholder('http://')
     } else {
-      setValue('email');
+      setInputType('email');
       setInputPlaceholder('mailto:')
     }
   };
@@ -40,21 +49,24 @@ const FormInput: FunctionComponent<Props> = ({
     return(
       <div className="my-4">
         <label htmlFor={label} className="text-base font-semibold">{label}</label>
-        <p className="text-xs mb-0">{description}</p>
-        <div className="mt-2 mb-3">
-          <Radio.Group onChange={onChange} value={value}>
+        <p className="text-xs mb-0 text-gray-500">{description}</p>
+        <div className="mt-1 mb-3">
+          <Radio.Group onChange={_onChange} value={inputType}>
             <Radio value="url">Url</Radio>
             <Radio value="email">Email</Radio>
           </Radio.Group>
         </div>
         <Input 
-          type={value}
+          type={inputType}
           size={size}
           placeholder={inputPlaceholder}
           id={label}
           className={`c-form-input`}
-          required
+          name={name}
+          onChange={onChange}
+          onBlur={onBlur}
         />
+        <p className="text-red-400 text-xs">{error}</p>
       </div>
     )
   }
@@ -64,14 +76,18 @@ const FormInput: FunctionComponent<Props> = ({
       {description && (
         <p className="text-xs mb-0">{description}</p>
       )}
-      <div className="mt-2">
+      <div className="mt-1">
         <Input 
           type={type}
           size={size}
           placeholder={placeholder}
           id={label}
           className={`c-form-input`}
+          name={name}
+          onChange={onChange}
+          onBlur={onBlur}
         />
+        <p className="text-red-400 text-xs">{error}</p>
       </div>
     </div>
   );

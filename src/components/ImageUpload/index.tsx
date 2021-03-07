@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Upload, message } from 'antd';
 import { LoadingOutlined, PlusOutlined } from '@ant-design/icons';
 
@@ -41,10 +41,14 @@ const ImageUpload = () => {
 
   const uploadButton = (
     <div>
-      {loading ? <LoadingOutlined /> : <PlusOutlined />}
+      { loading ? <LoadingOutlined /> : <PlusOutlined /> }
       <div style={{ marginTop: 8 }}>Upload</div>
     </div>
   );
+
+  if (imageUrl) {
+    localStorage.setItem('companyLogo', imageUrl);
+  }
 
   return (
     <Upload

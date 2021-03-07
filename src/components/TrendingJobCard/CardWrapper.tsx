@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from 'react';
-import TrendingJobCard from '.';
+import { FunctionComponent } from 'react';
+import TrendingJobCard from './index';
 
 type Props = {
   marginRight?: boolean;
