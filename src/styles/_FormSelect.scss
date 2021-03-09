@@ -1,8 +1,11 @@
 .c-form-select{
   width: 48%;
+  @media (max-width: 640px){
+    width: 100%;
+  }
 }
 .c-form-input{
-  margin-top: 20px;
+  // margin-top: 20px;
 }
 .c-form-input-wrapper{
   width: 48%;
