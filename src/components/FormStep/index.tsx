@@ -96,6 +96,7 @@ const FormStep: FunctionComponent<Props> = ({ teir }) => {
   const [selectedRole, setSelectedRole] = useState(undefined);
   const [selectedPosition, setSelectedPosition] = useState(undefined);
   const [current, setCurrent] = useState<number>(0);
+  const [loading, setLoading] = useState<boolean>(false);
 
   let { plan, price } = teir;
   let setLogo = ''; 
@@ -117,6 +118,7 @@ const FormStep: FunctionComponent<Props> = ({ teir }) => {
   };
 
   const handlePayment = async () => {
+    setLoading(true);
     const stripe = await stripePromise;
     const data = {
       price: price || 12500,
@@ -138,10 +140,11 @@ const FormStep: FunctionComponent<Props> = ({ teir }) => {
       });
 
       if (result.error) {
+        setLoading(false);
         console.log('failed');
       }
     }
-
+    setLoading(false);
   }
 
   const prev = () => {
@@ -203,13 +206,13 @@ const FormStep: FunctionComponent<Props> = ({ teir }) => {
 
   return (
     <>
-      <div className=" w-10/12 md:w-3/6 mx-auto ">
+      <div className=" w-10/12 md:w-3/12 mx-auto ">
         <Steps current={current}>
           {steps.map(item => (
             <Step 
               key={item.title} 
-              title={item.title} 
-              description={item.description} 
+              // title={item.title} 
+              // description={item.description} 
             />
           ))}
         </Steps>
@@ -287,7 +290,7 @@ const FormStep: FunctionComponent<Props> = ({ teir }) => {
               handleClick={handlePayment} 
               className="c-next-step text-white mr-2"
             >
-              Proceed
+              {!loading ? 'Proceed' : 'Loading...'}
             </Button>
             )}
             { current === steps.length - 1 && (

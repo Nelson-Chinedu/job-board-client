@@ -36,7 +36,7 @@ const AboutRole: FunctionComponent<{}> = () => {
         onBlur={handleBlur}
         error={errors!.title}
       />
-      <div className="flex justify-between">
+      <div className="flex flex-col md:flex-row justify-between">
         <div className="c-form-select">
           <FormSelect
             label="Role Focus"
@@ -70,7 +70,7 @@ const AboutRole: FunctionComponent<{}> = () => {
           />
         </div> 
       </div>
-      <div className="mt-4">
+      <div className="mt-2">
         <p className="text-base font-semibold mb-1">Job Description</p>
         <ReactQuill 
           value={value!.jobDescription} 
