@@ -4,10 +4,17 @@
 .c-post-job-card{
   width: 30%;
   border-top: 10px solid #E2E8F0;
+  .c-plan{
+    color:#FF8148;
+  }
   &:hover{
     border-top: 10px solid #FF8148;
   }
   @media (max-width: 640px){
     width: 100%;
   }
+}
+.c-test-border{
+  border-top: 10px solid #FF8148;
+  transform: scale(1.05) !important;
 }
