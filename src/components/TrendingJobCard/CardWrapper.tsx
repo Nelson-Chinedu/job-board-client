@@ -19,12 +19,12 @@ const CardWrapper: FunctionComponent<Props> = ({
 }) => {
   return (
     <TrendingJobCard marginRight={marginRight} className="c-trending-card rounded-md">
-      <p className="pt-2">{companyName}</p>
+      <p className="pt-2 mb-0">{companyName}</p>
       <div className="flex justify-between">
         <div>
-          <p className="pt-3">{position}</p>
-          <p className="pt-2">{location}</p>
-          <p className="pt-2">{posted}</p>
+          <p className="pt-3 mb-0">{position}</p>
+          <p className="pt-2 mb-0">{location}</p>
+          <p className="pt-2 mb-0">{posted}</p>
         </div>
         <div className="c-trending-card-img">
           <img src={companyLogo} alt="logo" />

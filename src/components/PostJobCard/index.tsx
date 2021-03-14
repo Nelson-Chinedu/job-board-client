@@ -43,12 +43,12 @@ const PostJobCard: FunctionComponent<Props> = ({
       initial="hidden"
       animate="visible"
       className={`c-post-job-card my-4 shadow-md rounded-lg p-8 text-center ${
-        plan === teirSelect ? "c-test-border border-teal-300 bg-gray-100" : ""
+        plan === teirSelect ? "c-job-border border-teal-300 bg-gray-100" : ""
       }`}
       onClick={() => onGetTeir({ price, plan })}
     >
       <div className="text-center">
-        <h2 className="font-bold text-5xl mb-0">
+        <h2 className="c-postjob-price font-bold text-5xl mb-0">
           <sup className="text-2xl">$</sup>
           {price}
         </h2>
@@ -59,7 +59,7 @@ const PostJobCard: FunctionComponent<Props> = ({
       <div>
         <ul>
           {listings.map((listing: string, index: number) => (
-            <li key={index}>{listing}</li>
+            <li key={index} className="c-postjob-listing">{listing}</li>
           ))}
         </ul>
       </div>

@@ -1,6 +1,7 @@
-import React, { FunctionComponent, useEffect } from 'react';
+import { FunctionComponent, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 
 import CardWrapper from '../CategoryCard/CardWrapper';
 
@@ -31,13 +32,13 @@ const Category: FunctionComponent<{}> = () => {
   };
   return (
     <div className="c-category">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-4">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-2">
         <div>
-          <h3 className="text-3xl md:text-4xl font-semibold">Remote Jobs</h3>
-          <h3 className="text-3xl md:text-4xl font-semibold">By Category</h3>
+          <h3 className="c-category-job text-3xl md:text-4xl font-semibold mb-0">Remote Jobs</h3>
+          <h3 className="c-category-job text-3xl md:text-4xl font-semibold mb-0">By Category</h3>
         </div>
-        <div className="py-4 underline md:no-underline md:py-0 md:pr-12">
-          <p className="font-medium">Explore Category</p>
+        <div className="py-4 md:py-0 md:pr-12">
+          <Link to="/" className="mb-0 underline">Explore Category</Link>
         </div>
       </div>
       <motion.div variants={boxVariants} initial="hidden" animate={controls} ref={ref}>

@@ -1,5 +1,14 @@
+.c-Navbar-menu{
+  a{
+    // color: initial;
+  }
+}
 .c-post-job{
   background-color: #FF8148;
+  &:hover{
+    transform: scale(1.1);
+    transition: transform .2s ease-in-out;
+  }
 }
 @media screen and (max-width: 640px) {
   .c-post-job{

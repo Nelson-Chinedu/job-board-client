@@ -1,3 +1,7 @@
+.c-select-tier{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
 .c-post-job-card-wrapper{
   width: 80%;
 }
@@ -14,7 +18,14 @@
     width: 100%;
   }
 }
-.c-test-border{
+.c-job-border{
   border-top: 10px solid #FF8148;
   transform: scale(1.05) !important;
+}
+.c-postjob-price{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
+.c-postjob-listing{
+  font-family: 'Poppins', sans-serif;
 }

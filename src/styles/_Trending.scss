@@ -6,16 +6,20 @@
     }
   }
 }
+.c-trending-job{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;   
+}
 .c-trending-job-card{
   width: 30%;
 }
 .c-trending-card{
+  cursor: pointer;
   >p{
     color: #FC9B90;
   }
-  &:hover{
-    transform: translateY(-10px);
-    cursor: pointer;
+  &:hover .c-trending-card-img{
+    transform: scale(1.2);
     transition:transform .4s ease-in-out;
   }
   .c-trending-card-img{

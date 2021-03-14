@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import {Route, Switch, BrowserRouter} from 'react-router-dom';
+import { BackTop } from 'antd';
 
 import Footer from './components/Footer';
 import PostJob from './components/PostJob';
@@ -29,6 +30,7 @@ const App:FunctionComponent<{}> = () => {
       <footer>
         <Footer />
       </footer>
+      <BackTop />
     </BrowserRouter>
   );
 }

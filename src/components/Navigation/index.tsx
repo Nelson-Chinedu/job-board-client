@@ -39,17 +39,11 @@ const Navigation: FunctionComponent<{}> = () => {
             href="/" 
             className="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-gray-600 mr-4"
           >
-            Browse All Jobs
-          </a>
-          <a
-            href="/" 
-            className="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-gray-600 mr-4"
-          >
-            Find a Remote Job
+            Find a Job
           </a>
           <a
             href="/post-job" 
-            className="c-post-job block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-white mr-4 px-4 py-2 text-white rounded"
+            className="c-post-job block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white hover:scale-95 mr-4 px-4 py-2 text-white rounded"
           >
             Post a Job
           </a>
