@@ -7,7 +7,7 @@ const PostJob: FunctionComponent<{}> = () => {
 
   return (
     <div className="my-28">
-      <h2 className="text-center text-3xl font-bold">Select Your Tier</h2>
+      <h2 className="c-select-tier text-center text-3xl font-bold">Select Your Tier</h2>
       <div className="c-post-job-card-wrapper flex flex-col md:flex-row my-8 mx-auto justify-between">
         <PostJobCard
           price={75}

@@ -23,7 +23,7 @@ const CardWrapper:FunctionComponent<Props> = ({
         <img src="/dot-hover.png" alt="dot"/>
       </div>
       <div className="py-2">
-        <h4 className="font-bold">{headlineTop}</h4>
+        <h4 className="font-bold mb-0">{headlineTop}</h4>
         <h4 className="font-bold">{headlineBottom}</h4>
       </div>
       <p>{label}</p>

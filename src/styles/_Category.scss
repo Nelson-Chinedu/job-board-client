@@ -6,14 +6,20 @@
       width: 100%;
     }
   }
+  .c-category-job{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+  }
   .c-category-card-img{
     width: 20%;
   }
   .c-category-card:hover{
     background-color: #FB7C6D;
-    color: white;
     cursor: pointer;
     transition:background-color .4s ease-in-out;
+    img, h4, p{
+      color: #fff;
+    }
   }
 }
 

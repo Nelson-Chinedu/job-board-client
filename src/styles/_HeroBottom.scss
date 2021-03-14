@@ -1,3 +1,7 @@
+.c-heroBottom-caption{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;   
+}
 .c-heroBottom{
   width: 90%;
   margin: auto;
@@ -5,6 +9,9 @@
   .c-heroBottom-applicants,
   .c-heroBottom-hire{
     color: #FB7C6D;
+  }
+  p{
+    font-family: 'Poppins', sans-serif;
   }
 }
 .dot-left{
@@ -15,7 +22,7 @@
 }
 .dot-right{
   position: absolute;
-  bottom: -100px;
+  bottom: -110px;
   right: 137px;
   width: 7%;
 }

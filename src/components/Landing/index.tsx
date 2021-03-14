@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import About from '../About';
 import Category from '../Category';
 import HeroBottom from '../HeroBottom';
