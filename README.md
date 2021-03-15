@@ -8,6 +8,7 @@ Post and find Remote Job
 ## Technologies Used
 - ReactJs
 - TypeScript
+- Stripe
 
 ## Prerequisites
 The following should be installed in your machine
@@ -22,6 +23,9 @@ The following should be installed in your machine
 - Install the dependencies by running `yarn install` or `npm install`
 - Create a `.env.local` file with `key=values` in `.env.sample` file
 - Start the application on development mode by running `npm start`
+
+## How To Post a Job By Making Payment
+Visit [Stripe](https://stripe.com/docs/testing) and use any of the test card numbers for a successful payment
 
 ## How To Contribute
 Kindly refer to the guide above to setup, and reachout to admin for further instructions
