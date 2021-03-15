@@ -1,0 +1,10 @@
+.c-jobs:nth-child(even){
+  background-color: #f2f2f2;
+}
+.c-btn-apply{
+  border: 1px solid #FF8148;
+  &:hover{
+    background-color: #FF8148;
+    transition: background-color .4s ease-in-out;
+  }
+}

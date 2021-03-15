@@ -11,32 +11,32 @@ const Footer: FunctionComponent<{}> = () => {
         <div className="mb-4 md:mb-0">
           <h4 className="font-bold">Employers</h4>
           <div className="mt-3 md:mt-5">
-            <p className="pb-3">Overview</p>
-            <p className="pb-3">Pricing</p>
+            <p className="pb-1">Overview</p>
+            <p className="pb-1">Pricing</p>
             <p>Post a job</p>
           </div>
         </div>
         <div className="mb-4 md:mb-0">
           <h4 className="font-bold">About</h4>
           <div className="mt-3 md:mt-5">
-            <p className="pb-3">Success stories</p>
-            <p className="pb-3">Overview</p>
-            <p className="pb-3">Team</p>
+            <p className="pb-1">Success stories</p>
+            <p className="pb-1">Overview</p>
+            <p className="pb-1">Team</p>
             <p>Press</p>
           </div>
         </div>
         <div>
           <h4 className="font-bold">General</h4>
           <div className="mt-3 md:mt-5">
-            <p className="pb-3">News</p>
-            <p className="pb-3">FAQ's</p>
-            <p className="pb-3">Contact us</p>
+            <p className="pb-1">News</p>
+            <p className="pb-1">FAQ's</p>
+            <p className="pb-1">Contact us</p>
             <p>Terms & Conditions</p>
           </div>
         </div>
       </div>
       <div className="text-center my-6">
-        <p>&copy; All rights reserved.</p>
+        <p className="pb-8">&copy; All Rights Reserved. - Made with &hearts;</p>
       </div>
     </div>
   )
