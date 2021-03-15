@@ -1,18 +1,24 @@
-import { FunctionComponent, useContext } from 'react';
-import ReactQuill from 'react-quill';
+import { FunctionComponent, useContext } from "react";
+import ReactQuill from "react-quill";
 
-import FormInput from '../Shared/Input';
-import ImageUpload from '../ImageUpload';
-import { FormContext } from '../Context/FormContext';
-import { TContext } from '../types/Context';
+import FormInput from "../Shared/Input";
+import ImageUpload from "../ImageUpload";
+import { FormContext } from "../Context/FormContext";
+import { TContext } from "../types/Context";
 
 const AboutCompany: FunctionComponent<{}> = () => {
-  const { value, handleChange, handleBlur, errors, setFieldValue }: TContext = useContext(FormContext)
-  
+  const {
+    value,
+    handleChange,
+    handleBlur,
+    errors,
+    setFieldValue,
+  }: TContext = useContext(FormContext);
+
   return (
     <div className="c-about-company-wrapper p-4 rounded-lg shadow-md md:p-8 my-8">
       <div className="flex flex-col md:flex-row w-full justify-between">
-        <FormInput 
+        <FormInput
           label="Company Name"
           placeholder="Enter Company Name"
           name="companyName"
@@ -24,7 +30,7 @@ const AboutCompany: FunctionComponent<{}> = () => {
           className="c-form-input-wrapper"
           error={errors!.companyName}
         />
-        <FormInput 
+        <FormInput
           label="Company Website"
           placeholder="http://"
           name="companyWebsite"
@@ -38,7 +44,7 @@ const AboutCompany: FunctionComponent<{}> = () => {
         />
       </div>
       <div className="flex flex-col md:flex-row items-baseline justify-between">
-        <FormInput 
+        <FormInput
           label="Email"
           placeholder="Enter Email Address"
           name="emailAddress"
@@ -55,7 +61,7 @@ const AboutCompany: FunctionComponent<{}> = () => {
           <div className="flex">
             <ImageUpload />
             <p className="text-xs">
-              Please provide .png format of your company's logo to be displayed 
+              Please provide .png format of your company's logo to be displayed
               with your job opening listing
             </p>
           </div>
@@ -63,13 +69,13 @@ const AboutCompany: FunctionComponent<{}> = () => {
       </div>
       <div className="mt-4">
         <p className="text-base font-semibold mb-1">Company Description</p>
-        <ReactQuill 
-          value={value!.companyDescription} 
-          onChange={(e: string) => setFieldValue('companyDescription', e)
-          } 
+        <ReactQuill
+          value={value!.companyDescription}
+          placeholder="Write Here..."
+          onChange={(e: string) => setFieldValue("companyDescription", e)}
         />
       </div>
-      <FormInput 
+      <FormInput
         label="Company Headquarter"
         placeholder="Enter Company Headquarter"
         name="companyHeadquarter"
@@ -82,7 +88,7 @@ const AboutCompany: FunctionComponent<{}> = () => {
         error={errors!.companyHeadquarter}
       />
     </div>
-  )
+  );
 };
 
 export default AboutCompany;

@@ -74,6 +74,7 @@ const AboutRole: FunctionComponent<{}> = () => {
         <p className="text-base font-semibold mb-1">Job Description</p>
         <ReactQuill 
           value={value!.jobDescription} 
+          placeholder="Write Here..."
           onChange={(e) => setFieldValue('jobDescription', e)}
         />
       </div> 

@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useState } from "react";
 
 const Navigation: FunctionComponent<{}> = () => {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -6,11 +6,9 @@ const Navigation: FunctionComponent<{}> = () => {
   const _handleButton = () => {
     toggleExpansion(!isExpanded);
   };
-  
+
   return (
-    <nav
-      className="fixed top-0 w-full bg-white border border-b-black z-10 flex items-center justify-between flex-wrap p-3 c-Navbar"
-    >
+    <nav className="fixed top-0 w-full bg-white border border-b-black z-10 flex items-center justify-between flex-wrap p-3 c-Navbar">
       <div className="flex items-center flex-shrink-0 text-white mr-6 h-12">
         <a href="/">
           <img src="/logo.png" height="70px" width="30%" alt="logo" />
@@ -31,18 +29,19 @@ const Navigation: FunctionComponent<{}> = () => {
           </svg>
         </button>
       </div>
-      <div className={`${isExpanded ? `block` : `hidden`} 
+      <div
+        className={`${isExpanded ? `block` : `hidden`} 
         w-full block  lg:flex lg:items-center lg:w-auto c-Navbar-menu`}
       >
         <div className="text-sm lg:flex-grow">
           <a
-            href="/" 
+            href="/remote-jobs/search"
             className="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-gray-600 mr-4"
           >
             Find a Job
           </a>
           <a
-            href="/post-job" 
+            href="/post-job"
             className="c-post-job block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white hover:scale-95 mr-4 px-4 py-2 text-white rounded"
           >
             Post a Job
@@ -50,7 +49,7 @@ const Navigation: FunctionComponent<{}> = () => {
         </div>
       </div>
     </nav>
- );
+  );
 };
 
 export default Navigation;

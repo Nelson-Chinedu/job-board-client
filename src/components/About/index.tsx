@@ -52,7 +52,7 @@ const About: FunctionComponent<{}> = () => {
         ref={ref} 
         className="w-full md:w-1/2 pt-10"
       >
-        <h3 className="c-about-intro text-sm text-center md:text-left md:text-xl font-light">
+        <h3 className="c-about-intro text-md text-center md:text-left md:text-xl font-light">
           The finder has been created to foster long-term
           business relations and network built on Trust and quality.
         </h3>
