@@ -37,15 +37,15 @@ const HeroSection: FunctionComponent<{}> = () => {
             }}
           />
         </span>
-        <Link to="/post-job" className="border-0 outline-none">
-        <motion.button
-          initial={{ x: "-100vh" }}
-          animate={{ x: 0, transition: { type: "spring", stiffness: 150 } }}
-          whileHover={{ translateY: -5 }}
-          className="c-btn-get-started py-4 px-8 mt-6 md:mt-8 rounded-full text-white font-semibold tracking-wider"
-        >
-          Post a Job
-        </motion.button>
+        <Link to="/remote-jobs/search" className="border-0 outline-none">
+          <motion.button
+            initial={{ x: "-100vh" }}
+            animate={{ x: 0, transition: { type: "spring", stiffness: 150 } }}
+            whileHover={{ translateY: -5 }}
+            className="c-btn-get-started py-4 px-8 mt-6 md:mt-8 rounded-full text-white font-semibold tracking-wider"
+          >
+            Find a Job
+          </motion.button>
         </Link>
       </div>
       <div className="w-full md:w-6/12">
