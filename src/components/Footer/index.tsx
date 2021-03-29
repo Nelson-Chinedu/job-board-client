@@ -1,11 +1,11 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent } from "react";
 
 const Footer: FunctionComponent<{}> = () => {
   return (
-    <div className="">
+    <div className="border-t border-b-black">
       <div className="flex flex-col mx-4 md:flex-row md:items-start md:justify-around md:mx-0 my-10">
         <div className="mb-6">
-          <img src="/logo.png" alt="logo" className="w-1/4"/>
+          <img src="/logo.png" alt="logo" className="w-1/4" />
           <p className="w-3/5">An ultimate solution for remote jobs</p>
         </div>
         <div className="mb-4 md:mb-0">
@@ -36,10 +36,19 @@ const Footer: FunctionComponent<{}> = () => {
         </div>
       </div>
       <div className="text-center my-6">
-        <p className="pb-8">&copy; All Rights Reserved. - Made with &hearts;</p>
+        <p className="pb-8">
+          &copy; All Rights Reserved. - Made with &hearts;{" "}
+          <a
+            href="https://nelsondev.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Nelson
+          </a>
+        </p>
       </div>
     </div>
-  )
+  );
 };
 
 export default Footer;

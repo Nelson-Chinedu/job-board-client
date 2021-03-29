@@ -37,11 +37,11 @@ const FindJob: FunctionComponent<{}> = () => {
     if (searchTerm.length === 0) {
       return;
     }
-    const showJob = jobs.filter((job:any) => {
+    const showJob = jobs.filter((job: any) => {
       if (searchTerm === "") {
         return job;
       } else if (
-        job.jobTitle.toLowerCase().includes(searchTerm.toLowerCase()) || 
+        job.jobTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
         job.companyName.toLowerCase().includes(searchTerm.toLowerCase()) ||
         job.position.toLowerCase().includes(searchTerm.toLowerCase()) ||
         job.companyHeadquarter
@@ -65,7 +65,7 @@ const FindJob: FunctionComponent<{}> = () => {
         <p className="text-lg font-light c-findjob-top-title">
           Find your next career at one of the best remote companies in the world
         </p>
-        <div className="w-11/12 shadow-sm border border-gray-300 p-4 mb-2 md:p-6 md:w-9/12 mx-auto">
+        <div className="w-11/12 shadow-sm border border-gray-300 p-2 md:p-4 mb-2 md:p-6 md:w-9/12 mx-auto">
           <form className="flex items-baseline" onSubmit={handleSubmit}>
             <SearchOutlined style={{ fontSize: 25 }} className="mr-4" />
             <FormInput

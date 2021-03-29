@@ -1,5 +1,4 @@
 import { FunctionComponent } from "react";
-import { Link } from "react-router-dom";
 
 type Props = {
   companyName: string;
@@ -14,19 +13,24 @@ const Jobs: FunctionComponent<Props> = ({
   jobTitle,
   jobRole,
   positionType,
-  datePosted
+  datePosted,
 }) => {
   return (
     <>
-      <div className="c-jobs px-4 py-2">
+      <div className="c-jobs bg-gray-100 px-4 py-2 mb-4 tracking-wider">
         <div className="flex justify-between items-center mb-4 mt-4">
           <div className="flex items-center">
-            <div className="border border-black rounded-full hidden md:block md:mr-4">
-              <img src="/logo192.png" alt="logo" width="50px" height="50px" />
+            <div className="border border-black rounded-full overflow-hidden hidden h-12 md:block md:mr-4">
+              <img
+                src="/companyLogoo.png"
+                alt="logo"
+                width="50px"
+                height="50px"
+              />
             </div>
             <div>
               <h3 className="mb-1 text-black">{companyName}</h3>
-              <p className="mb-1 text-black">{jobTitle}</p>
+              <p className="mb-1 text-black font-semibold w-3/5 md:w-full">{jobTitle}</p>
               <p className="mb-1 text-black">
                 {jobRole} &bull; {positionType}
               </p>
@@ -35,11 +39,9 @@ const Jobs: FunctionComponent<Props> = ({
           <div>
             <p className="text-black">{datePosted}</p>
           </div>
-          <Link to="/" className="hidden md:block">
-            <button className="c-btn-apply px-4 py-2 rounded hover:text-white">
-              Apply
-            </button>
-          </Link>
+          <button className="c-btn-apply px-4 py-2 rounded hover:text-white hidden md:block">
+            Apply
+          </button>
         </div>
       </div>
     </>
