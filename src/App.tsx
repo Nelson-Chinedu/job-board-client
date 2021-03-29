@@ -14,6 +14,7 @@ import Failure from "./components/PaymentFeedback/Failure";
 import FindJob from "./components/FindJob";
 import DisplayJobCategories from "./components/DisplayJobCategories";
 import NotFound from "./components/NotFound";
+import JobDetails from "./components/JobDetails";
 
 const App: FunctionComponent<{}> = () => {
   useEffect(() => {
@@ -37,6 +38,9 @@ const App: FunctionComponent<{}> = () => {
         </Route>
         <Route path="/categories/:url">
           <DisplayJobCategories />
+        </Route>
+        <Route path="/remote-jobs/:url:id">
+          <JobDetails />
         </Route>
         <Route path="/payment/success">
           <Success />
