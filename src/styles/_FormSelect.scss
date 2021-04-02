@@ -4,14 +4,14 @@
     width: 100%;
   }
 }
-.c-form-input{
-  // margin-top: 20px;
-}
 .c-form-input-wrapper{
   width: 48%;
   @media (max-width: 640px){
     width: 100%;
   }
+}
+.c-form-input-wrapper .w-full{
+  width: 100%;
 }
 .ant-select-selector{
   margin-top: 8px;
