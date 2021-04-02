@@ -59,7 +59,7 @@ const JobDetails: FunctionComponent<{}> = () => {
               day: "numeric",
             })}
           </p>
-          <h3 className="c-jobDetails-title text-3xl font-semibold">
+          <h3 className="c-jobDetails-title text-3xl mb-2 font-semibold">
             {job.jobTitle}
           </h3>
           <span className="tracking-wider border border-black bg-purple-200 px-2 py-1 mr-2">
@@ -87,7 +87,7 @@ const JobDetails: FunctionComponent<{}> = () => {
             </a>
           </div>
         </div>
-        <div className="w-full hidden md:block md:w-1/4 text-center bg-gray-50 shadow rounded py-4">
+        <div className="w-full h-4/5 hidden md:block md:w-1/4 text-center bg-gray-50 shadow rounded py-4">
           <div className="mb-6">
             <img
               src="/companyLogoo.png"
@@ -101,7 +101,7 @@ const JobDetails: FunctionComponent<{}> = () => {
             href={job.companyWebsite}
             target="_blank"
             rel="noreferrer"
-            className="c-post-job text-white hover:text-white hover:shadow-lg px-4 py-2 rounded"
+            className="c-post-job text-white hover:text-white hover:shadow-lg px-4 py-2 mb-8 rounded"
           >
             Apply for this position
           </a>

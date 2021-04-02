@@ -1,5 +1,5 @@
-import { FunctionComponent, ReactNode } from 'react';
-import classnames from 'classnames';
+import { FunctionComponent, ReactNode } from "react";
+import classnames from "classnames";
 
 type Props = {
   className: string;
@@ -8,25 +8,23 @@ type Props = {
 };
 
 const TrendingJobCard: FunctionComponent<Props> = ({
-  className, 
-  marginRight, 
-  children
+  className,
+  marginRight,
+  children,
 }) => {
   const mainClassname = classnames({
-    'mr-8': marginRight
+    "mr-8": marginRight,
   });
   return (
     <div
-      className= {
-        `c-trending-job-card 
+      className={`c-trending-job-card 
         ${mainClassname} 
         ${className} 
-        block my-6 bg-white shadow px-4 pb-6 md:inline-block md:my-4`
-      }
+        my-3 bg-white shadow px-4 pb-6 md:my-2`}
     >
       {children}
     </div>
-  )
+  );
 };
 
 export default TrendingJobCard;

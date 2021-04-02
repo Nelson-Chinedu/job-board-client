@@ -1,37 +1,36 @@
-import { FunctionComponent } from 'react';
-import TrendingJobCard from './index';
+import { FunctionComponent } from "react";
+import TrendingJobCard from "./index";
 
 type Props = {
-  marginRight?: boolean;
   companyName: string;
   location: string;
   companyLogo: string;
   posted: string;
   position: string;
-}
+};
+
 const CardWrapper: FunctionComponent<Props> = ({
-  marginRight, 
-  companyLogo, 
-  companyName, 
+  companyLogo,
+  companyName,
   location,
   posted,
-  position
+  position,
 }) => {
   return (
-    <TrendingJobCard marginRight={marginRight} className="c-trending-card rounded-md">
+    <TrendingJobCard className="c-trending-card rounded-md">
       <p className="pt-2 mb-0">{companyName}</p>
       <div className="flex justify-between">
         <div>
-          <p className="pt-3 mb-0">{position}</p>
-          <p className="pt-2 mb-0">{location}</p>
-          <p className="pt-2 mb-0">{posted}</p>
+          <p className="pt-3 mb-0 text-black">{position}</p>
+          <p className="pt-2 mb-0 text-black">{location}</p>
+          <p className="pt-2 mb-0 text-black">{posted}</p>
         </div>
         <div className="c-trending-card-img">
           <img src={companyLogo} alt="logo" />
         </div>
       </div>
     </TrendingJobCard>
-  )
+  );
 };
 
 export default CardWrapper;

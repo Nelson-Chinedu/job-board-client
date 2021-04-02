@@ -1,5 +1,5 @@
-import { FunctionComponent } from 'react';
-import Select from 'react-select';
+import { FunctionComponent } from "react";
+import Select from "react-select";
 
 type Props = {
   value?: () => void;
@@ -8,25 +8,27 @@ type Props = {
   name?: string;
   options?: any;
   placeholder?: string;
-  onchange?: any
+  onchange?: any;
   onblur?: any;
   error?: any;
-}
+};
 
 const FormSelect: FunctionComponent<Props> = ({
-  onblur, 
-  label, 
-  value, 
-  name, 
-  options, 
-  placeholder, 
-  onchange, 
-  error
+  onblur,
+  label,
+  value,
+  name,
+  options,
+  placeholder,
+  onchange,
+  error,
 }) => {
   return (
-    <div>
-      <label htmlFor="" className="text-base font-semibold">{label}</label>
-      <Select 
+    <div className="my-2 md:my-0">
+      <label htmlFor="" className="text-base font-semibold">
+        {label}
+      </label>
+      <Select
         options={options}
         name={name}
         value={value}
@@ -37,7 +39,7 @@ const FormSelect: FunctionComponent<Props> = ({
       />
       <p className="text-red-400 text-xs">{error}</p>
     </div>
-  )
+  );
 };
 
 export default FormSelect;
