@@ -12,7 +12,9 @@ type Props = {
 const ShowJob: FunctionComponent<Props> = ({ jobs, category, filter }) => {
   return (
     <div className="my-8 mx-2">
-      <h2 className="c-showJob-category font-bold text-2xl mx-2 md:mx-0">{category}</h2>
+      <h2 className="c-showJob-category font-bold text-2xl mb-2 mx-2 md:mx-0">
+        {category}
+      </h2>
       {jobs
         .filter((job: any) => job.role === `${filter}`)
         .map((data: any) => {

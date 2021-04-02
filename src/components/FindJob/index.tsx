@@ -1,6 +1,7 @@
 import { FunctionComponent, useState, useEffect, ChangeEvent } from "react";
 import { SearchOutlined } from "@ant-design/icons";
 import axios, { AxiosResponse } from "axios";
+import { Link } from "react-router-dom";
 
 import Jobs from "./Jobs";
 import ShowJob from "./showJob";
@@ -62,7 +63,7 @@ const FindJob: FunctionComponent<{}> = () => {
         <h2 className="c-findjob-top-caption font-bold mb-2 text-4xl md:text-6xl">
           Advanced Search
         </h2>
-        <p className="text-lg font-light c-findjob-top-title">
+        <p className="text-lg font-light c-findjob-top-title mb-4">
           Find your next career at one of the best remote companies in the world
         </p>
         <div className="w-11/12 shadow-sm border border-gray-300 p-2 md:p-4 mb-2 md:p-6 md:w-9/12 mx-auto">
@@ -97,18 +98,27 @@ const FindJob: FunctionComponent<{}> = () => {
         {filteredJobs.length > 0 &&
           searchTerm.length !== 0 &&
           filteredJobs.map((job: any) => {
+            const urlParam = job.jobTitle.split(" ").join("-");
             return (
               <div className="w-full mx-auto md:w-9/12" key={job._id}>
-                <Jobs
-                  jobTitle={job.jobTitle}
-                  jobRole={job.role}
-                  companyName={job.companyName}
-                  positionType={job.position}
-                  datePosted={new Date().toLocaleDateString("en-us", {
-                    month: "short",
-                    day: "numeric",
-                  })}
-                />
+                <Link
+                  to={{
+                    pathname: `${job.companyName}-${urlParam}`,
+                    search: `?q=${job._id}`,
+                  }}
+                  key={job._id}
+                >
+                  <Jobs
+                    jobTitle={job.jobTitle}
+                    jobRole={job.role}
+                    companyName={job.companyName}
+                    positionType={job.position}
+                    datePosted={new Date().toLocaleDateString("en-us", {
+                      month: "short",
+                      day: "numeric",
+                    })}
+                  />
+                </Link>
               </div>
             );
           })}
@@ -129,6 +139,16 @@ const FindJob: FunctionComponent<{}> = () => {
                 category="Sales and Marketing Jobs"
                 filter="Sales and Marketing"
               />
+            </div>
+            <div>
+              <ShowJob
+                jobs={jobs}
+                category="Product Management Jobs"
+                filter="Product"
+              />
+            </div>
+            <div>
+              <ShowJob jobs={jobs} category="Design Jobs" filter="Design" />
             </div>
           </div>
         )}
